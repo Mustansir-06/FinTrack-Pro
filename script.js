@@ -21,13 +21,15 @@ const dashboard=document.querySelector(".dashboard")
 const settings=document.querySelector(".settings")
 const todash=document.querySelector(".todash")
 const toset=document.querySelector(".toset")
-toset.addEventListener("click",()=>{
+toset.addEventListener("click",(e)=>{
+     e.preventDefault();
     dashboard.style.display="none"
     settings.style.display="flex"
     todash.classList.remove("active")
     toset.classList.add("active")
 })
-todash.addEventListener("click",()=>{
+todash.addEventListener("click",(e)=>{
+     e.preventDefault();
     settings.style.display="none"
     dashboard.style.display="flex"
     toset.classList.remove("active")
