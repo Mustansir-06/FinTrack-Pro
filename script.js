@@ -166,6 +166,8 @@ settingsForm.addEventListener('submit', (e) => {
     localStorage.setItem('user', JSON.stringify(userProfile));
 
     initProfile();
+    updateSummaryAndChart(); 
+    renderTransactions();
     alert('Settings saved successfully!');
 });
 
